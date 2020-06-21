@@ -1,0 +1,83 @@
+.content, .search_area, .result_area, .description {
+    display: flex;
+    flex-direction: column;
+}
+.content {
+    width: 94%;
+    margin: 1em 0 1em 3%;
+}
+.search_area, .result_area {
+    margin: 0.5em;
+    padding: 0.5em;
+    background-color: #f6f6f6;
+    border-radius: 1em;
+    box-shadow: 0.12em 0.12em #868686;
+}
+.search_area * {
+    margin: 0.3em 0.5em;
+}
+.search_area form {
+    display: flex;
+    flex-direction: column;
+}
+.search_area label {
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 13pt;
+}
+.search_area [name="search_title"], .search_area [name="search_description"] {
+    border: 0.1em solid #bababa;
+    border-radius: 0.3em;
+}
+.search_area [name="search_title"] {
+    height: 1.5em;
+}
+[type="submit"] {
+    align-self: center;
+    width: 12em;
+    height: 2.5em;
+    border: none;
+    border-radius: 0.5em;
+    color: white;
+    background-color: #5fba4f;
+    font-family: Verdana, Geneva, sans-serif;
+    cursor: pointer;
+}
+[type="button"]:hover {
+    background-color: #67ca56;
+}
+.result {
+    display: flex;
+    padding: 1em 0.5em;
+    border-bottom: 0.1em solid darkgray;
+}
+.result img {
+    width: 10em;
+    height: 10em;
+    object-fit: none;
+    border: 1em solid #d4d4d4;
+    border-radius: 0.7em;
+}
+.description {
+    margin: 1em 1em 1em 2em;
+    font-family: Verdana, Geneva, sans-serif;
+}
+.title {
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 17pt;
+    margin: 0 0 1em 0;
+}
+.detail {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 5;
+    overflow: hidden;
+}
+.page {
+    display: flex;
+    justify-content: center;
+    font-size: 12pt;
+    margin-bottom: 0.5em;;
+}
+.page span {
+    color: blue;
+}

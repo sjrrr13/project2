@@ -1,0 +1,95 @@
+section {
+    margin: 1% 3%;
+    padding: 1% 2%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f6f6f6;
+    border-radius: 3em;
+}
+section form {
+    width: 100%;
+    margin-left: 10%;
+}
+.container {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+}
+#tip {
+    margin: 18% 0;
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 20pt;
+}
+.button {
+    margin: 1em 0;
+    position: relative;
+    padding: 0.5em 1.4em;
+    text-align: center;
+    font-size: 13pt;
+    font-family: Verdana, Geneva, sans-serif;
+    color: white;
+    background-color: #5fba4f;
+    border-radius: 0.4em;
+    cursor: pointer;
+}
+.button:hover {
+    background-color: #67ca56;
+}
+.button input {
+    position: absolute;
+    top: 1.7em;
+    left: -0.5em;
+    font-size: 5pt;
+    opacity: 0;
+    cursor: pointer;
+}
+.preview {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+}
+.preview img {
+    margin: 2%;
+    width: 80%;
+}
+.info {
+    margin: 1em 0;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.info .tip {
+    margin: 1% 0;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    font-size: 15pt;
+}
+.info .description {
+    width: 100%;
+    padding: 0.3em 0;
+    border: 0.1em solid lightgray;
+    border-radius: 0.2em;
+}
+#tool {
+    display: none;
+}
+input[type="submit"] {
+    margin: 2em 0 0;
+    padding: 0.5em 1.5em;
+    align-self: center;
+    font-size: 13pt;
+    font-family: Verdana, Geneva, sans-serif;
+    color: white;
+    background-color: #5fba4f;
+    border: none;
+    border-radius: 0.4em;
+    cursor: pointer;
+}
+input[type="submit"]:hover {
+    background-color: #67ca56;
+}

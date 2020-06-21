@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Log in</title>
+    <link href="../css/reset.css" rel="stylesheet" type="text/css">
+    <link href="../css/form.css" rel="stylesheet" type="text/css">
+    <link href="../css/footer1.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<img src="../../images/icons/login.jpg" alt="login">
+<h1>
+    Sign in for Fisher
+</h1>
+<form action="../php/logIn.php" method="post" name="logInForm">
+    <div class="tip">
+        User name
+    </div>
+    <input class="inputBox" type="text" name="userName" id="userName" required>
+    <div class="tip">
+        Password
+    </div>
+    <input class="inputBox" type="password" name="password" id="password" required><br>
+    <input type="submit" value="Sign in" id="logInBtn">
+</form>
+<div class="help">
+    New to Fisher?<a href="register.html">Create a new account!</a><br>
+    <a href = mailLogIn.html><span style="color:black;">Log In Through</span> E-mail</a>
+</div>
+<footer>
+    Copyright&copy;2020web应用基础19302010035佘家瑞
+</footer>
+<script src="../jquery-3.3.1.min.js"></script>
+<script>
+   $(function() {
+       $("#logInBtn").click(function() {
+           let user = $("#userName").val();
+           let pwd = $("#password").val();
+           if(user == "" || pwd == "") {
+               alert("输入不能为空");
+           }
+       })
+   })
+</script>
+</body>
+</html>

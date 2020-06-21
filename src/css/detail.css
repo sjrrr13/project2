@@ -1,0 +1,83 @@
+section {
+    display: flex;
+    flex-direction: column;
+    background-color: #f6f6f6;
+    border-radius: 3em;
+    margin: 2em 3%;
+    padding: 2em;
+}
+.title {
+    text-align: center;
+    padding-bottom: 1em;
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 16pt;
+    font-weight: bold;
+    border-bottom: 0.1em solid darkgray;
+}
+.title span {
+    font-size: 12pt;
+    margin-left: 2em;
+}
+.show_area {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2em;
+}
+.show_area img {
+    width: auto;
+    height: auto;
+    max-width: 40%;
+}
+.detail {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10%;
+    width: 50%;
+}
+table {
+    align-self: flex-start;
+    margin-bottom: 2em;
+}
+th, td {
+    padding: 0.6em 1em;
+    font-size: 15pt;
+    text-align: left;
+}
+.detail [name="tool"] {
+    display: none;
+}
+.detail [type="submit"], [type="button"] {
+    align-self: center;
+    width: 40%;
+    height: 3em;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 1.5em;
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 13pt;
+    cursor: pointer;
+}
+.detail [type="button"] {
+    background-color: #b9b9b9;
+}
+.detail [type="submit"]:hover {
+    background-color: orangered;
+}
+.detail .liked {
+    align-self: flex-end;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+}
+.detail .liked span {
+    color: red;
+    font-size: 15pt;
+}
+.description {
+    font-size: 13pt;
+    line-height: 1.5em;
+}
+.description span {
+    font-weight: bold;
+}
+

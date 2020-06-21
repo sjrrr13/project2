@@ -1,0 +1,63 @@
+header {
+    margin: 0;
+    padding: 0;
+    height: 2.5em;
+    border-bottom: 0.3em solid #b9b9b9;
+}
+nav {
+    margin-top: 1.6%;
+    margin-left: 1.5%;
+}
+.nav, .nav:hover, .current {
+    float: left;
+    margin-left: 5%;
+    text-decoration: none;
+    color: #a3a3a3;
+    font-size: 13pt;
+}
+.nav:hover, .current {
+    color: black;
+}
+.dropdown {
+    float: right;
+    margin-right: 5%;
+    position: relative;
+    display: inline-block;
+}
+#log {
+    text-decoration: none;
+    font-size: 13pt;
+    cursor: pointer;
+    color: black;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fafafa;
+    width: 8em;
+    margin-top: 0.2em;
+    border-radius: 0.5em;
+}
+.dropdown-content a {
+    color: black;
+    font-size: 10pt;
+    text-decoration: none;
+    display: block;
+    padding: 0.5em 0.5em 0.5em 0.8em;
+    border-radius: 0.5em;
+}
+.dropdown-content a:hover {
+    background-color: black;
+    color: white;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.icon {
+    width: 1.2em;
+    height: 1.2em;
+    margin: 0;
+    padding: 0;
+    vertical-align: middle;
+}
+

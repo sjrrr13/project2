@@ -1,0 +1,73 @@
+body {
+    background-color: #f6f6f6;
+    margin: 0;
+    padding: 0;
+}
+img {
+    width: 4em;
+    height: 4em;
+    margin: 2% 47% 0;
+}
+h1 {
+    text-align: center;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    border: 0.1em solid white;
+    border-radius: 0.5em;
+    background-color: white;
+    margin: 2em 37%;
+    padding: 1em;
+}
+.tip {
+    align-self: flex-start;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    font-size: 15pt;
+}
+.inputBox {
+    margin: 1em 0;
+    align-self: center;
+    border: 0.15em solid #d6dbdf;
+    border-radius: 0.3em;
+    width: 86%;
+    height: 2em;
+}
+#reminder, #reminder2 {
+    width: 0.6em;
+    height: 0.6em;
+    border-radius: 50%;
+    background-color: white;
+}
+#passwordBox,#passwordBox2 {
+    display: flex;
+    align-items: center;
+}
+[type="submit"] {
+    padding: 0.5em 0;
+    align-self: center;
+    background-color: #5fba4f;
+    border: 0.1em solid #5fba4f;
+    border-radius: 0.2em;
+    width: 40%;
+    color: white;
+    font-size: 13pt;
+    cursor: pointer;
+}
+[type="submit"]:hover {
+    background-color: #67ca56;
+    color: white;
+}
+.help {
+    text-align: center;
+    font-size: 11pt;
+    margin-top: -1em;
+    padding: 0;
+}
+.help a {
+    text-decoration: none;
+    color: dodgerblue;
+}
+.help a:hover {
+    color: rebeccapurple;
+}

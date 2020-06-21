@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Register</title>
+    <link href="../css/reset.css" rel="stylesheet" type="text/css">
+    <link href="../css/form.css" rel="stylesheet" type="text/css">
+    <link href="../css/footer1.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<img src="../../images/icons/register.jpg" alt="register">
+<h1>
+    Sign up for Fisher
+</h1>
+<form action="../php/register.php" method="post" name="registerForm">
+    <div class="tip">
+        User name<br>
+    </div>
+    <input class="inputBox" type="text" name="userName" id="userName" placeholder="3~10 characters" required>
+    <div class="tip">
+        E-mail<br>
+    </div>
+    <input class="inputBox" type="text" name="email" id="email" required>
+    <div class="tip" id="passwordBox">
+        Password &nbsp; &nbsp; <div id="reminder"></div><br>
+    </div>
+    <input class="inputBox" type="password" name="password" id="password" placeholder="6~15 characters" required>
+    <div class="tip" id="passwordBox2">
+        Confirm Your Password &nbsp; &nbsp; <div id="reminder2"></div><br>
+    </div>
+    <input class="inputBox" type="password" name="rePassword" id="rePassword" required><br>
+    <input type="submit" id="registerBtn" value="Sign up" onclick="return check();">
+</form>
+<footer>
+Copyright&copy;2020web应用基础19302010035佘家瑞
+</footer>
+<script src="../jquery-3.3.1.min.js"></script>
+<script>
+    $(function() {
+        let reminder = $("#reminder");
+
+        //检验密码长度6-15，并提示密码强度
+        $("#password").blur(function() {
+            //获取密码，设置一些相关变量
+            let pwd = $("#password").val();
+            let strength = 0;
+            let patterns = [/[0-9]/, /[a-z]/, /[A-Z]/, /[^0-9a-zA-Z]/];
+
+            if(pwd.length < 6 || pwd.length > 15) {
+                reminder.css("background-color", "red");
+            } else {
+               for(let i = 0; i < 4; i++) {
+                   if(patterns[i].test(pwd)){
+                       strength++;
+                   }
+               }
+               switch (strength) {
+                    case 1:
+                        reminder.css("background-color", "orange");
+                        break;
+                    case 2:
+                        reminder.css("background-color", "yellow");
+                        break;
+                    case 3:
+                        reminder.css("background-color", "green");
+                        break;
+                    default:
+                        reminder.css("background-color", "white");
+                        break;
+                }
+            }
+        });
+
+        //密码和确认密码是否一致
+        $("#rePassword").blur(function() {
+            let pwd = $("#password").val();
+            let repwd = $("#rePassword").val();
+            if(pwd !== ''){
+                if (pwd !== repwd) {
+                    $("#reminder2").css("background-color", "red");
+                } else {
+                    $("#reminder2").css("background-color", "green");
+                }
+            }
+        });
+    })
+</script>
+<script>
+    function check() {
+        //获取用户名和邮箱
+        let username = document.registerForm.userName.value;
+        let email = document.registerForm.email.value;
+        let pwd = document.registerForm.password.value;
+        let repwd = document.registerForm.rePassword.value;
+        let canSubmit = true;
+
+        //1.非空
+        if(username == "" || email == "" || pwd == "" || repwd == "") {
+            alert("输入不能为空");
+            canSubmit = false;
+        }
+
+        //2.用户名长度4-10
+        if(username.length < 3 || username.length > 10) {
+            alert("用户名长度应为3-10位");
+            canSubmit = false;
+        }
+
+        //3.邮箱地址的检验
+        let pattern = /[A-Za-z0-9]\w{2,}@(\w{2,}\.){1,2}\w{2,4}/i;
+        if(!(pattern.test(email))) {
+            alert("无效的邮箱地址");
+            canSubmit = false;
+        }
+
+        if(pwd.length < 6 || pwd.length > 15) {
+            alert("密码长度应在6-15位");
+            canSubmit = false;
+        }
+
+        //4.密码和确认密码是否一致
+        if(pwd !== repwd) {
+            alert("两次输入密码不一致");
+            canSubmit = false;
+        }
+
+        return canSubmit;
+    }
+</script>
+</body>
+</html>
